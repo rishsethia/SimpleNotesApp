@@ -3,8 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/add_medication_coordinatorLayout"
+    android:id="@+id/add_note_coordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -105,7 +104,7 @@
 
                     <EditText
                         android:id="@+id/note_title_edittext"
-                        android:textColor="@color/gray_900"
+                        android:textColor="@color/gray"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:contentDescription="@string/note_title_cd"
@@ -147,7 +146,7 @@
 
                     <EditText
                         android:id="@+id/add_note_text_edittext"
-                        android:textColor="@color/gray_900"
+                        android:textColor="@color/gray"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:contentDescription="@string/note_text_cd"
@@ -175,7 +174,7 @@
                 android:layout_marginEnd="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
                 android:contentDescription="@string/done_medicie_cd"
-                android:onClick="saveMedication"
+                android:onClick="saveNote"
                 android:text="@string/add_button_text"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/colorAccent"

@@ -17,4 +17,16 @@
     <string name="done_medicie_cd">Apply Button</string>
     <string name="add_button_text">ADD</string>
     <string name="ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="cd_back_button">Back Button</string>
+    <string name="activity_detail_title">Details</string>
+    <string name="delete_button">DELETE</string>
+    <string name="delete_note_dialog_positive">Yes</string>
+    <string name="dialog_delete_negative_button">Cancel</string>
+    <string name="delete_note_alert_dialog">Note will be deleted</string>
+    <string name="alert_dialog_note_blank">Please enter something</string>
+    <string name="add_note_quit_dialog_text">This note won\'t be saved ! Are you sure ?</string>
+    <string name="dialog_add_quit_positive_button">Yes</string>
+    <string name="dialog_negative_button">CANCEL</string>
+    <string name="delete_note_toast">Note Deleted</string>
+    <string name="note_saved_success">Note Saved Successfully</string>
 </resources>
