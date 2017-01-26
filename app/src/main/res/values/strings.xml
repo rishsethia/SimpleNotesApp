@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Simple Notes App</string>
+    <string name="your_notes_text">Your Notes :</string>
+    <string name="cd_no_notes">No notes. Click Add  Button to add a note</string>
+    <string name="empty_recycler_text">No Notes</string>
+    <string name="cd_add_notes">Add Notes Button</string>
+
 </resources>
