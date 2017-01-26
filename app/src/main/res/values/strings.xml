@@ -4,5 +4,17 @@
     <string name="cd_no_notes">No notes. Click Add  Button to add a note</string>
     <string name="empty_recycler_text">No Notes</string>
     <string name="cd_add_notes">Add Notes Button</string>
-
+    <string name="exit_cd">Quit Adding Button</string>
+    <string name="add_note_activity_title">Add Notes</string>
+    <string name="cd_save_note">Add Note Save Button</string>
+    <string name="save_button_text">OK</string>
+    <string name="note_title">Title</string>
+    <string name="note_title_cd">Enter Note Title</string>
+    <string name="note_title_hint">Please enter title</string>
+    <string name="note_text">Enter Text</string>
+    <string name="note_text_cd">Add Note Text</string>
+    <string name="note_text_hint">Please enter text</string>
+    <string name="done_medicie_cd">Apply Button</string>
+    <string name="add_button_text">ADD</string>
+    <string name="ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
 </resources>
