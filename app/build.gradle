@@ -5,7 +5,7 @@ android {
         config {
             keyAlias 'rishabh'
             keyPassword 'password'
-            storeFile file('/Users/Rishabh/Desktop/SimpleNotesApp/keystore.jks')
+            storeFile file('../keystore.jks')
             storePassword 'password'
         }
     }
