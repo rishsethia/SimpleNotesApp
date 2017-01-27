@@ -1,6 +1,5 @@
 package com.example.rishabh.simplenotesapp.database;
 
-import net.simonvt.schematic.annotation.AutoIncrement;
 import net.simonvt.schematic.annotation.DataType;
 import net.simonvt.schematic.annotation.NotNull;
 import net.simonvt.schematic.annotation.PrimaryKey;
@@ -17,7 +16,6 @@ public class NotesColumns {
     @DataType(DataType.Type.INTEGER)
     @PrimaryKey
     @Unique
-    @AutoIncrement
     public static final String _ID = "_id";
 
 

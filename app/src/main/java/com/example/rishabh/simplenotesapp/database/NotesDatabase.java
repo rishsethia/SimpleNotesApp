@@ -8,9 +8,10 @@ import net.simonvt.schematic.annotation.Table;
  */
 
 @Database(version = NotesDatabase.VERSION)
+
 public class NotesDatabase {
 
-    public static final int VERSION = 1;
+    public static final int VERSION = 2;
 
     @Table(NotesColumns.class)
     public static final String NOTES = "notes";

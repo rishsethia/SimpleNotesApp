@@ -70,6 +70,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager
                 .build()
         );
 
+        getLoaderManager().initLoader(CURSOR_LOADER_ID, null, this);
+
+
         notesCursorAdapter = new NotesCursorAdapter(mContext,null);
         recyclerView.setEmptyView(emptyView);
         recyclerView.setAdapter(notesCursorAdapter);
@@ -84,10 +87,11 @@ public class MainActivity extends AppCompatActivity implements LoaderManager
                         mCursor.moveToPosition(position);
 
                         Intent intent = new Intent(mContext, DetailsActivity.class);
-                        intent.putExtra("notesId", mCursor.getString(NotesColumns
+                        intent.putExtra("notesId", mCursor.getInt(NotesColumns
                                 .ID_INDEX));
+
                         intent.putExtra("noteTitle", mCursor.getString(NotesColumns.TITLE_INDEX));
-                        intent.putExtra("noteText", mCursor.getInt(NotesColumns
+                        intent.putExtra("noteText", mCursor.getString(NotesColumns
                                 .TEXT_INDEX));
 
                         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {

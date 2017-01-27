@@ -37,12 +37,11 @@ public class DetailsActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        titleView.setText(intent.getStringExtra(""));
-        titleView.setText(intent.getStringExtra(""));
+        titleView.setText(intent.getStringExtra("noteTitle"));
+        textView.setText(intent.getStringExtra("noteText"));
 
         //TODO Look
         id = intent.getIntExtra("notesId",0);
-
 
 
         //TODO ANIMATIONS
@@ -92,7 +91,9 @@ public class DetailsActivity extends AppCompatActivity {
                 .show();
     }
 
-    public void onClickBackButton(View view) {
+
+
+    public void onBack(View view) {
         finish();
     }
 

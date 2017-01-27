@@ -79,14 +79,13 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
         android:gravity="center"
-        android:textAllCaps="true"
         android:textAppearance="?android:textAppearanceLarge"
-        android:textStyle="bold"
-        android:transitionName="selectedNote"/>
+        android:textStyle="bold" />
+
+        <!--android:transitionName="selectedNote"/>-->
 
     <TextView
         android:id="@+id/note_text_detail"
-        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/activity_vertical_margin"

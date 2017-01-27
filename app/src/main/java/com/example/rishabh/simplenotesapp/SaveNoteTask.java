@@ -3,6 +3,7 @@ package com.example.rishabh.simplenotesapp;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
@@ -24,14 +25,13 @@ public class SaveNoteTask extends AsyncTask<NoteProperties,Void,NoteProperties> 
         long timeInMillis = params[0].getTimeInMillis();
 
         ContentValues newContentValues = new ContentValues();
+
         newContentValues.put(NotesColumns.TEXT,noteText);
         newContentValues.put(NotesColumns.TITLE,noteTitle);
         newContentValues.put(NotesColumns.TIME_IN_MILLIS,timeInMillis);
 
         ContentResolver cr = mContext.getContentResolver();
-
-        cr.insert(NotesProvider.Notes.CONTENT_URI,newContentValues);
-
+       Uri uri =  cr.insert(NotesProvider.Notes.CONTENT_URI,newContentValues);
         MainActivity.updateWidgets(mContext);
         return params[0];
     }

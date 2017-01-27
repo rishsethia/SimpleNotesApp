@@ -72,7 +72,12 @@ public class AddNotesActivity extends AppCompatActivity {
 //
 //            getWindow().setEnterTransition(amEnter);
 //            getWindow().setReturnTransition(amReturn);
-        }
+
+
+
+    }
+
+
 
 
     public void closingDialogFunction(View view) {
@@ -114,7 +119,8 @@ public class AddNotesActivity extends AppCompatActivity {
         bundle.putInt("length_frequency",noteText.length() );
 
 
-        mAnalytics.logEvent("add_medicine", bundle);
+//        mAnalytics.logEvent("add_medicine", bundle);
+
 
         AddNotesActivity.this.finish();
     }
