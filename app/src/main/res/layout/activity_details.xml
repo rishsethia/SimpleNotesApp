@@ -2,7 +2,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -52,6 +51,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/delete_button"
                     android:backgroundTint="@color/colorAccent"
+                    android:background="@color/colorAccent"
                     />
             </LinearLayout>
 

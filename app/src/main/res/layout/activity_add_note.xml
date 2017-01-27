@@ -151,8 +151,8 @@
                         android:layout_height="wrap_content"
                         android:contentDescription="@string/note_text_cd"
                         android:hint="@string/note_text_hint"
-                        android:inputType="textImeMultiLine"
-                        android:lines="8"
+                        android:inputType="textMultiLine"
+                        android:maxLines="10"
                         android:minLines="6"
                         android:scrollbars="vertical"
                         android:gravity="top|left"
@@ -178,6 +178,7 @@
                 android:text="@string/add_button_text"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/colorAccent"
+                android:background="@color/colorAccent"
                 ></Button>
 
             <com.google.android.gms.ads.AdView
