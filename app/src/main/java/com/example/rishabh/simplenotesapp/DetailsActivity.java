@@ -3,9 +3,12 @@ package com.example.rishabh.simplenotesapp;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.transition.Explode;
+import android.transition.Slide;
 import android.view.View;
 import android.widget.TextView;
 
@@ -40,32 +43,30 @@ public class DetailsActivity extends AppCompatActivity {
         titleView.setText(intent.getStringExtra("noteTitle"));
         textView.setText(intent.getStringExtra("noteText"));
 
-        //TODO Look
+
         id = intent.getIntExtra("notesId",0);
 
 
-        //TODO ANIMATIONS
 
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-//            Transition detailsEnter = new Fade(Fade.IN);
-//            Transition detailsReturn = new Fade(Fade.OUT);
-//
-//            detailsEnter.setDuration(250);
-//            detailsReturn.setDuration(250);
-//
-//            detailsEnter.excludeTarget(android.R.id.statusBarBackground, true);
-//            detailsEnter.excludeTarget(android.R.id.navigationBarBackground, true);
-//            detailsEnter.excludeTarget(R.id.floatingActionButtonDelete, true);
-//            detailsEnter.excludeTarget(R.id.toolbar_details, true);
-//
-//            detailsReturn.excludeTarget(android.R.id.statusBarBackground, true);
-//            detailsReturn.excludeTarget(android.R.id.navigationBarBackground, true);
-//            detailsReturn.excludeTarget(R.id.floatingActionButtonDelete, true);
-//            detailsReturn.excludeTarget(R.id.toolbar_details, true);
-//
-//            getWindow().setEnterTransition(detailsEnter);
-//            getWindow().setReturnTransition(detailsReturn);
-//        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Explode detailsEnter = new Explode();
+            Slide detailsReturn = new Slide();
+
+            detailsEnter.setDuration(250);
+            detailsReturn.setDuration(250);
+
+            detailsEnter.excludeTarget(android.R.id.statusBarBackground, true);
+            detailsEnter.excludeTarget(android.R.id.navigationBarBackground, true);
+            detailsEnter.excludeTarget(R.id.detail_toolbar, true);
+
+            detailsReturn.excludeTarget(android.R.id.statusBarBackground, true);
+            detailsReturn.excludeTarget(android.R.id.navigationBarBackground, true);
+            detailsReturn.excludeTarget(R.id.detail_toolbar, true);
+
+            getWindow().setEnterTransition(detailsEnter);
+            getWindow().setReturnTransition(detailsReturn);
+        }
 
     }
 

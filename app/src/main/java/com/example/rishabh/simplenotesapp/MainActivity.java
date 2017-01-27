@@ -8,10 +8,14 @@ import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
+import android.transition.Explode;
+import android.transition.Slide;
+import android.transition.Transition;
 import android.view.View;
 import android.widget.TextView;
 
@@ -21,6 +25,7 @@ import com.example.rishabh.simplenotesapp.recyclerViewHelpers.EmptyRecyclerViewS
 import com.example.rishabh.simplenotesapp.recyclerViewHelpers.NotesCursorAdapter;
 import com.example.rishabh.simplenotesapp.recyclerViewHelpers.rvClickListener;
 import com.facebook.stetho.Stetho;
+import com.google.android.gms.ads.MobileAds;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -77,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager
         recyclerView.setEmptyView(emptyView);
         recyclerView.setAdapter(notesCursorAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(mContext));
-
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-3940256099942544~3347511713");
 
 
         recyclerView.addOnItemTouchListener(new rvClickListener(this, new
@@ -102,6 +107,26 @@ public class MainActivity extends AppCompatActivity implements LoaderManager
                             startActivity(intent);
                     }
                 }));
+
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Transition mainExit = new Explode();
+            Transition mainReenter = new Slide();
+            mainExit.setDuration(250);
+
+            mainExit.excludeTarget(R.id.fabAdd, true);
+            mainExit.excludeTarget(android.R.id.statusBarBackground, true);
+            mainExit.excludeTarget(android.R.id.navigationBarBackground, true);
+            mainExit.excludeTarget(R.id.toolbar_main, true);
+
+            mainReenter.excludeTarget(R.id.fabAdd, true);
+            mainReenter.excludeTarget(android.R.id.statusBarBackground, true);
+            mainReenter.excludeTarget(android.R.id.navigationBarBackground, true);
+            mainReenter.excludeTarget(R.id.toolbar_main, true);
+
+            getWindow().setExitTransition(mainExit);
+            getWindow().setReenterTransition(mainReenter);
+        }
 
             updateWidgets(mContext);
     }

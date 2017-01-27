@@ -72,6 +72,8 @@ public class NoteRVService extends RemoteViewsService {
                 intent.putExtra("noteText", mCursor.getString(NotesColumns
                         .TEXT_INDEX));
 
+
+                rv.setOnClickFillInIntent(R.id.note_item_layout,intent);
                 return rv;
             }
 
